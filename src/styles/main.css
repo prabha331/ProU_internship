@@ -20,7 +20,6 @@
   --badge-text: #1d4ed8;
 }
 
-/* DARK MODE */
 [data-theme="dark"] {
   --bg: #1b1e2b;
   --card: #24283b;
@@ -55,7 +54,6 @@ body {
   margin: 0 auto;
 }
 
-/* Header */
 .header {
   display:flex;
   align-items:center;
@@ -97,7 +95,6 @@ body {
   color: var(--muted);
 }
 
-/* Filters */
 .filter-bar {
   display:flex;
   gap:12px;
@@ -113,7 +110,6 @@ body {
   color: var(--text);
 }
 
-/* Button */
 .button {
   padding: 8px 12px;
   border-radius: 8px;
@@ -128,7 +124,6 @@ body {
   opacity: 0.85;
 }
 
-/* Toggle */
 .toggle-btn {
   padding: 8px 14px;
   border-radius: 8px;
@@ -138,14 +133,12 @@ body {
   color: var(--text);
 }
 
-/* Card Grid */
 .grid {
   display:grid;
   gap:16px;
   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
 }
 
-/* Card */
 .card {
   background: var(--card);
   padding: 16px;
@@ -164,7 +157,6 @@ body {
   color: var(--text-secondary);
 }
 
-/* Badge */
 .badge {
   padding:6px 12px;
   border-radius: 999px;
@@ -174,7 +166,6 @@ body {
   border: 1px solid rgba(255,255,255,0.06);
 }
 
-/* Fade animation */
 .fade-in {
   animation: fade 0.3s ease;
 }
@@ -184,7 +175,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Skeleton Loader */
 .skeleton {
   position:relative;
   background: var(--card);
@@ -223,7 +213,6 @@ body {
   100% { transform: translateX(100%); }
 }
 
-/* Employee Detail */
 .employee-detail {
   background: var(--card);
   padding: 24px;
@@ -232,7 +221,6 @@ body {
   margin-top: 20px;
 }
 
-/* FIX RED DOT — prevent pulse styles leaking to SVG */
 .task-item .pulse-dot {
   width: 14px;
   height: 14px;
@@ -242,7 +230,6 @@ body {
   animation: pulse 1.6s infinite;
 }
 
-/* Remove any accidental circles in Recharts */
 svg circle {
   fill: transparent !important;
   stroke: transparent !important;
@@ -254,7 +241,6 @@ svg circle {
   100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.0); transform: scale(1); }
 }
 
-/* Heatmap */
 .heatmap-cell {
   border-radius: 8px;
   min-height: 40px;
@@ -263,7 +249,6 @@ svg circle {
   justify-content:center;
 }
 
-/* Tooltip */
 .recharts-default-tooltip {
   background: var(--card);
   color: var(--text);

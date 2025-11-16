@@ -1,4 +1,3 @@
-// src/components/TaskListWithPulse.jsx
 import React from "react";
 
 function PriorityBadge({ priority }) {

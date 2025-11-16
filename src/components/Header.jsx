@@ -1,14 +1,5 @@
-// src/components/Header.jsx
 import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
-
-/**
- * Header with search + autosuggest and theme toggle
- * Props:
- *  - employees: array of employee objects (for suggestion pool)
- *  - searchTerm, setSearchTerm
- *  - theme, setTheme
- */
 
 function debounce(fn, delay = 200) {
   let t;
@@ -52,8 +43,7 @@ export default function Header({ employees = [], searchTerm, setSearchTerm, them
       if (e.location.toLowerCase().includes(term)) pushUnique({ type: "location", value: e.location });
     });
 
-    // also suggest roles/locations even if not exact match
-    // limit to top 8
+    
     setSuggestions(found.slice(0, 8));
   };
 
@@ -64,12 +54,10 @@ export default function Header({ employees = [], searchTerm, setSearchTerm, them
     setLocal(v);
     setOpen(true);
     debounced(v);
-    // reflect live in parent search too
     setSearchTerm(v);
   }
 
   function onPick(s) {
-    // when user clicks suggestion, set search to that value and close
     setLocal(s.value);
     setSearchTerm(s.value);
     setOpen(false);
@@ -127,7 +115,7 @@ export default function Header({ employees = [], searchTerm, setSearchTerm, them
                   justifyContent: "space-between",
                   alignItems: "center"
                 }}
-                onMouseDown={(e) => e.preventDefault()} // prevent blur
+                onMouseDown={(e) => e.preventDefault()} 
               >
                 <div style={{ fontSize: 14 }}>
                   <strong style={{ marginRight: 8 }}>{s.value}</strong>

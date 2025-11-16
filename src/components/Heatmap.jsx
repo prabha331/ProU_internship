@@ -1,10 +1,5 @@
-// src/components/Heatmap.jsx
 import React, { useMemo } from "react";
 
-/**
- * Heatmap of tasks across days-of-week (Sun-Sat)
- * Expects tasks: [{id, title, priority, due: 'YYYY-MM-DD'}...]
- */
 
 const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const COLORS = ["#e6f4ff", "#cfe9ff", "#99d2ff", "#60a5fa", "#1e90ff"]; // light->strong

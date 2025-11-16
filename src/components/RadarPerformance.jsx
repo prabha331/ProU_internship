@@ -1,4 +1,3 @@
-// src/components/RadarPerformance.jsx
 import React from "react";
 import {
   RadarChart,
@@ -42,14 +41,14 @@ export default function RadarPerformance({ employee, allEmployees }) {
 
   return (
     <div style={{
-      width: "430px",         // MORE SPACE FOR RIGHT AREA
+      width: "430px",         
       overflow: "visible",
       display: "flex",
-      justifyContent: "flex-end",   // **** MOVES GRAPH RIGHT ****
-      paddingRight: "30px",         // **** SHIFT MORE RIGHT ****
+      justifyContent: "flex-end",   
+      paddingRight: "30px",         
     }}>
       <RadarChart
-        cx={190}       // moved RIGHT (100 → 130 → 160 → now 190)
+        cx={190}       
         cy={145}
         outerRadius={105}
         width={430}

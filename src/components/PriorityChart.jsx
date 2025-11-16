@@ -5,8 +5,7 @@ export default function PriorityChart({ tasks }) {
     { name: "High", value: tasks.filter(t => t.priority === "High").length },
     { name: "Medium", value: tasks.filter(t => t.priority === "Medium").length },
     { name: "Low", value: tasks.filter(t => t.priority === "Low").length }
-  ].filter(d => d.value > 0); // hide zero slices optionally
-
+  ].filter(d => d.value > 0); 
   const COLORS = ["#ef4444", "#f59e0b", "#10b981"];
 
   if (data.length === 0) {

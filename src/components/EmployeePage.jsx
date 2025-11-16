@@ -1,4 +1,3 @@
-// src/components/EmployeePage.jsx
 import { useParams, Link } from "react-router-dom";
 import Heatmap from "./Heatmap";
 import RadarPerformance from "./RadarPerformance";

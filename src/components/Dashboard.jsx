@@ -5,7 +5,6 @@ import SkeletonCard from "./SkeletonCard";
 export default function Dashboard({ data, searchTerm, filters }) {
   const [loading, setLoading] = useState(true);
 
-  // simulate small API delay to show skeletons
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 650);
     return () => clearTimeout(t);
