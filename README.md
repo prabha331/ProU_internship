@@ -1,82 +1,85 @@
-Employee Productivity Dashboard 
+# Employee Productivity Dashboard
 
-A modern, responsive Employee Productivity Dashboard built using React + Vite, designed as part of the ProU Internship Coding Challenge.
-The goal of this project is to demonstrate frontend development skills, UI/UX creativity, clean code structure, and real-world problem-solving.
+A modern, responsive Employee Productivity Dashboard built using **React + Vite**, created for the **ProU Internship Coding Challenge**.
 
-Live Demo:
+---
 
- Hosted on Netlify / Vercel :
-
+## 🚀 Live Demo  
+**Hosted on Netlify:**  
 https://prouintern.netlify.app/
 
-GitHub Repository :
+---
 
+## 📌 GitHub Repository  
 https://github.com/prabha331/ProU_internship
 
-Tech Stack Used :
+---
 
-Frontend
-React (Vite)
-React Router
-Recharts 
-Custom CSS 
-CSS Variables for Light/Dark Theme
-Mock JSON Data
+## 🛠 Tech Stack Used
 
-Tools & Libraries :
-Vite 
-Netlify
-Git & GitHub
+### **Frontend**
+- React (Vite)
+- React Router
+- Recharts
+- Custom CSS / CSS Variables (Light & Dark Theme)
+- Mock JSON Data
 
- Project Overview
-This dashboard helps visualize employee performance, workload, and task distribution using clean UI and data visualizations.
+### **Tools & Libraries**
+- Vite  
+- Netlify  
+- Git & GitHub  
 
-You can:
+---
 
-View all employees
-Search employees
-Filter by location / department
-Open a detailed employee page
-View radar chart of performance
-View pie chart of task priority
-See task list with high-priority pulse animation
-View heatmap of weekly task load
-Toggle Light/Dark theme
-Autosuggest search
-Skeleton loader while fetching
+## 📊 Project Overview
+This dashboard visualizes employee performance, workload, and task distribution using modern UI and interactive charts.
 
-Problem This Project Solves
+### **You can:**
+- View all employees  
+- Search employees  
+- Filter by location / department  
+- Open detailed employee pages  
+- View Radar Chart for performance  
+- View Pie Chart for task priority  
+- See task list with high-priority pulse animation  
+- View heatmap of weekly task load  
+- Toggle Light/Dark theme  
+- Autosuggest search  
+- Skeleton loader while fetching  
 
-Modern teams work remotely and managers need quick insights into an employee’s productivity.
-This dashboard solves:
+---
 
-1. Visibility Problem
+## 🧩 Problem This Project Solves
+
+### **1️⃣ Visibility Problem**
 Managers can instantly check:
-Completed tasks
-Overdue tasks
-High priority work
-Upcoming deadlines
+- Completed tasks  
+- Overdue tasks  
+- High-priority workload  
+- Upcoming deadlines  
 
-2. Performance Understanding
-The Radar Chart gives a quick snapshot of:
-Completion rate
-Punctuality
-High priority focus
-Workload share
+### **2️⃣ Performance Understanding**
+Radar chart gives quick insights about:
+- Completion rate  
+- Punctuality  
+- High-priority focus  
+- Workload share  
 
-3. Smart UI Decisions
-The app uses:
-Autosuggest search
-Skeleton loaders
-Dark mode
-Mobile responsiveness
+### **3️⃣ Smart UI Decisions**
+Includes:
+- Autosuggest  
+- Skeleton loaders  
+- Dark mode  
+- Responsive layout  
 
- Setup Instructions :
- 
-1. Clone the repository
+---
+
+## ⚙️ Setup Instructions
+
+### **1. Clone the repository**
+```bash
 git clone https://github.com/prabha331/ProU_internship
-cd prou_frontend
-
+cd ProU_internship
 2. Install dependencies
 npm install
 
