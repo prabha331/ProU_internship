@@ -1,0 +1,279 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-600: #1d4ed8;
+
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --radius: 12px;
+  --gap: 16px;
+  --max-width: 1100px;
+
+  --text: #1e293b;
+  --text-secondary: #475569;
+
+  --success: #10b981;
+  --danger: #ef4444;
+
+  --badge-bg: #eef2ff;
+  --badge-text: #1d4ed8;
+}
+
+/* DARK MODE */
+[data-theme="dark"] {
+  --bg: #1b1e2b;
+  --card: #24283b;
+
+  --text: #eaf1f8;
+  --text-secondary: #b7c0d0;
+
+  --muted: #9aa5b8;
+
+  --accent: #60a5fa;
+  --accent-600: #60a5fa;
+
+  --badge-bg: #2f3550;
+  --badge-text: #bfd6ff;
+
+  --shadow: 0 12px 32px rgba(0,0,0,0.45);
+}
+
+* { box-sizing: border-box; }
+html,body,#root { height:100%; }
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 24px;
+}
+
+.app {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom: 18px;
+  gap: 16px;
+}
+
+.app-title {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo {
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  background: linear-gradient(135deg,#60a5fa,#7c3aed);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  box-shadow: var(--shadow);
+}
+
+.search-input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  width: 320px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--card);
+  color: var(--text);
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+/* Filters */
+.filter-bar {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.select {
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:var(--card);
+  color: var(--text);
+}
+
+/* Button */
+.button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  cursor:pointer;
+  border:none;
+  transition: 0.2s;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+/* Toggle */
+.toggle-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--muted);
+  cursor:pointer;
+  color: var(--text);
+}
+
+/* Card Grid */
+.grid {
+  display:grid;
+  gap:16px;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+}
+
+.card .meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Badge */
+.badge {
+  padding:6px 12px;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Fade animation */
+.fade-in {
+  animation: fade 0.3s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Skeleton Loader */
+.skeleton {
+  position:relative;
+  background: var(--card);
+  border-radius: 12px;
+  padding:16px;
+  overflow:hidden;
+}
+
+.skeleton-line,
+.skeleton-title {
+  height:14px;
+  background:#d1d5db;
+  border-radius:6px;
+  margin-bottom:10px;
+}
+
+.skeleton-title {
+  width:70%;
+  height:18px;
+}
+
+.skeleton-line.short {
+  width:40%;
+}
+
+.skeleton::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Employee Detail */
+.employee-detail {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+}
+
+/* FIX RED DOT — prevent pulse styles leaking to SVG */
+.task-item .pulse-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #ef4444;
+  box-shadow: 0 0 0 0 rgba(239,68,68,0.45);
+  animation: pulse 1.6s infinite;
+}
+
+/* Remove any accidental circles in Recharts */
+svg circle {
+  fill: transparent !important;
+  stroke: transparent !important;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); transform: scale(1); }
+  50% { box-shadow: 0 0 0 12px rgba(239,68,68,0.04); transform: scale(1.05); }
+  100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.0); transform: scale(1); }
+}
+
+/* Heatmap */
+.heatmap-cell {
+  border-radius: 8px;
+  min-height: 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Tooltip */
+.recharts-default-tooltip {
+  background: var(--card);
+  color: var(--text);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.recharts-wrapper {
+  overflow: visible !important;
+}
+
+.employee-detail {
+  overflow: visible !important;
+}
