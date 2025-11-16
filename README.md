@@ -31,7 +31,7 @@ Git & GitHub
  Project Overview
 This dashboard helps visualize employee performance, workload, and task distribution using clean UI and data visualizations.
 
-✔ You can:
+You can:
 
 View all employees
 Search employees
